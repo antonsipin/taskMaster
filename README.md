@@ -2,9 +2,9 @@
 
 <b> Task Master: Развлекательное приложение под iOS и Android. Приложение для общения с друзьями и коллегами, обмена фотографиями выполненных заданий, просмотра выполненных заданий друзей, подсчёта рейтинга, обмена лайками.
   </b>
- <p color="red">
+ <b bgcolor="red">
 Techs: HTML, CSS, JavaScript, Express.js, Node.js, MongoDB, React Native, Redux.
- </p>
+ </b>
 
 Команда
 
