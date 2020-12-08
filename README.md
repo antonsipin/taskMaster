@@ -38,7 +38,7 @@ Android
   <img src="assets/Android_2.jpg" width="250" title="Экран добавления группы">
   <img src="assets/Android_3.jpg" width="250" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
   <img src="assets/Android_5.jpg" width="250" title="Экран добавления задачи">
-  <img src="assets/Android_9.jpg" width="250" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
+  <img src="assets/Android_12.jpg" width="250" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
   <img src="assets/Android_10.jpg" width="250" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
   <img src="assets/Android_11.jpg" width="250" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
   <img src="assets/Android_13.jpg" width="250" alt="Рейтинг на экране Liderboard">
