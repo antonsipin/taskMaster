@@ -33,11 +33,11 @@ iOS
 </b>
 
 <p align="center">
-  <img src="assets/1" width="290" title="Экран регистрации">
-  <img src="assets/2" width="290" alt="Аккаунт пользователя">
-  <img src="assets/3" width="290" title="Экран добавления задачи">
-  <img src="assets/4" width="290" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
-  <img src="assets/5" width="290" alt="Список всех задач">
+  <img src="assets/1" width="250" title="Экран регистрации">
+  <img src="assets/2" width="250" alt="Аккаунт пользователя">
+  <img src="assets/3" width="250" title="Экран добавления задачи">
+  <img src="assets/4" width="250" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
+  <img src="assets/5" width="250" alt="Список всех задач">
 </p>
 
 <b>
