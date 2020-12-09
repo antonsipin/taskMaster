@@ -21,6 +21,9 @@ Android
   </b>
   <p align="center">
   <img src="assets/Android_gif_0.gif" width="250" title="Экран регистрации">
+  <img src="assets/Android_gif_1.gif" width="250" title="Экран добавления задачи">
+  <img src="assets/Android_gif_2.gif" width="250" title="Лента. Возвожность добавить фотографию и поставить лайк.">
+  <img src="assets/Android_gif_3.gif" width="250" title="Рейтинг на экране Liderboard">
   <img src="assets/Android_0.jpg" width="250" title="Экран регистрации">
   <img src="assets/Android_1.jpg" width="250" alt="Аккаунт пользователя">
   <img src="assets/Android_2.jpg" width="250" title="Экран добавления группы">
