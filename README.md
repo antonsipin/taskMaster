@@ -5,7 +5,7 @@
   
  <b>
 Techs: HTML, CSS, JavaScript, Express.js, Node.js, MongoDB, React Native, Redux.
- </b>
+ </b> <br />
  
  <b>
 Команда
