@@ -5,11 +5,11 @@
   
  <b>
 Techs: HTML, CSS, JavaScript, Express.js, Node.js, MongoDB, React Native, Redux.
- </b> <br />
+ </b> <br /> <br />
  
  <b>
-Команда
-</b>
+Команда:
+</b> <br />
 
 https://github.com/MuckHub
 
