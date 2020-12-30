@@ -1,15 +1,15 @@
-# taskMaster
+# Task Master
 
-<b> Task Master: Развлекательное приложение под iOS и Android. Приложение для общения с друзьями и коллегами, обмена фотографиями выполненных заданий, просмотра выполненных заданий друзей, подсчёта рейтинга, обмена лайками.
-  </b> <br />
+<h3> This is an entertainment application for iOS and Android for communicating with friends and colleagues, sharing photos of completed tasks, viewing completed tasks of friends, calculating ratings, exchanging likes.
+</h3>
   
- <b>
+<h3>
 Techs: HTML, CSS, JavaScript, Express.js, Node.js, MongoDB, React Native, Redux.
- </b> <br /> <br />
+</h3>
  
- <b>
+ <h3>
 Команда:
-</b> <br />
+</h3>
 
 https://github.com/MuckHub
 
@@ -17,28 +17,26 @@ https://github.com/KetiRudneva
 
 https://github.com/antonsipin
 
-Android
-  </b>
-  <p align="center">
+<h3 align="center">
+Android screens:
+</h3>
+  <h3 align="center">
   <img src="assets/Android_gif_0.gif" width="250" title="Экран регистрации">
   <img src="assets/Android_gif_1.gif" width="250" title="Экран добавления задачи">
   <img src="assets/Android_gif_2.gif" width="250" title="Лента. Возвожность добавить фотографию и поставить лайк.">
   <img src="assets/Android_gif_3.gif" width="250" title="Рейтинг на экране Liderboard">
   <img src="assets/Android_2.jpg" width="250" title="Экран добавления группы">
   <img src="assets/Android_3.jpg" width="250" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
-  </p>
+ </h3>
 
-<b>
-iOS
-</b>
+<h3 align="center">
+iOS screens:
+</h3>
 
-<p align="center">
+<h3 align="center">
   <img src="assets/1" width="250" title="Экран регистрации">
   <img src="assets/2" width="250" alt="Аккаунт пользователя">
   <img src="assets/3" width="250" title="Экран добавления задачи">
   <img src="assets/4" width="250" alt="Лента. Возвожность добавить фотографию и поставить лайк.">
   <img src="assets/5" width="250" alt="Список всех задач">
-</p>
-
-<b>
-
+</h3>
