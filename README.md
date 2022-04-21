@@ -20,6 +20,7 @@ https://github.com/antonsipin
 <h3 align="center">
 Android screens:
 </h3>
+
   <h3 align="center">
   <img src="assets/Android_gif_0.gif" width="250" title="Экран регистрации">
   <img src="assets/Android_gif_1.gif" width="250" title="Экран добавления задачи">
