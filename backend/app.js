@@ -1,9 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const logger = require('morgan');
-const sessionFileStore = require('session-file-store');
-const session = require('express-session');
 const app = express();
 const dbConnect = require('./src/config/dbConnect');
 const PORT = process.env.PORT || 3100;
@@ -13,7 +10,6 @@ const Tasks = require('./src/models/task.model');
 const accountRouter = require('./src/routes/account');
 const likesRouter = require('./src/routes/likes');
 const newGroupRouter = require('./src/routes/newGroup');
-
 const newTaskRouter = require('./src/routes/newTask');
 const taskNameRouter = require('./src/routes/taskName');
 const groupTasksRouter = require('./src/routes/getTasks');

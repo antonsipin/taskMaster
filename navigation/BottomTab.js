@@ -4,7 +4,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ProfileStack from '../navigation/ProfileStackNavigation';
 import AnotherStackNavigator from '../navigation/AnotherStackNavigation';
 import AllTasksScreen from '../screens/AllTasksScreen';
-
 const Tab = createBottomTabNavigator();
 
 export default function MyTabs() {

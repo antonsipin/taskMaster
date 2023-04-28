@@ -61,12 +61,8 @@ async function seedBase() {
       },
     ],
   });
-  // await user1.save();
-  // await user2.save();
   await group1.save();
   await group2.save();
-  // await task1.save();
-  // await task2.save();
 }
 seedBase();
 module.exports = seedBase;

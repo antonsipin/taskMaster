@@ -1,30 +1,27 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { isAuthAC } from '../redux/actions';
 import {
   StyleSheet,
   Text,
   View,
-  Button,
   TextInput,
   Keyboard,
   TouchableWithoutFeedback,
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
-import { useDispatch } from 'react-redux';
-import { isAuthAC } from '../redux/actions';
-import { addGroupsMainAC } from '../redux/actions';
 
 export default function AuthScreen({ navigation }) {
   const [error, setError] = useState(null);
   const [login, setLogin] = useState('');
   const [pass, setPass] = useState('');
-
   const dispatch = useDispatch();
 
   const authHandler = async () => {
     setError(null);
 
-    let response = await fetch('http://192.168.43.13:3100/auth', {
+    const response = await fetch('/auth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +30,6 @@ export default function AuthScreen({ navigation }) {
     });
 
     const data = await response;
-
     if (data.status === 401) setError('Invalid password or login!');
     if (data.status === 400) setError('Please fill all the forms');
     if (data.status === 200) {

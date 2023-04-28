@@ -1,5 +1,4 @@
 const Group = require('../models/group.model');
-const Task = require('../models/task.model');
 
 const leaderboard = async (req, res) => {
   try {

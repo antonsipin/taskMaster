@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity, SafeAreaView } from 'react-native';
 
-export default function ProfileScreen({ navigation }) {
+export default function ProfileScreen() {
   return (
    
       <View style={styles.container}>

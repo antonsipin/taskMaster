@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function ProfileScreen({ login, points, navigation }) {
   return (
@@ -12,7 +12,6 @@ export default function ProfileScreen({ login, points, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    // textAlignVertical: 'center',
     padding: 10,
     marginVertical: 10,
     borderWidth: 2,

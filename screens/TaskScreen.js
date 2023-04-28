@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import {
   StyleSheet,
   Text,
   View,
-  Button,
   ScrollView,
   Image,
   ImageBackground,
-  SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
 
-import TaskName from '../compenents/ComponentsTaskScreen/TaskName';
 import TaskImage from '../compenents/ComponentsTaskScreen/TaskImage';
-import TaskDescription from '../compenents/ComponentsTaskScreen/TaskDescription';
 import { addPostsAC, addEmptyPostAC } from '../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIsFocused } from '@react-navigation/native';
@@ -85,7 +81,6 @@ export default function TaskScreen({ route, navigation }) {
           <View>
             {postsRedux.map((el) => {
               let isLiked = el.likesCount.includes(user);
-
               let avatar = require(`../assets/def_ava.jpg`);
               if (el.login == 'Anton') {
                 avatar = require(`../assets/Anton.jpg`);

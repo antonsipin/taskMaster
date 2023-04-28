@@ -1,4 +1,3 @@
-
 import {
   IS_AUTH,
   GROUPS_MAIN,
@@ -39,7 +38,6 @@ export const reducers = (state = { isAuth: null }, action) => {
       return {...state, allTasks: action.payload.allTasks};
     
     case ADD_BOARD:
-      console.log('>>>>>', action.payload)
       return {...state, chart: action.payload.chart};
 
     default:

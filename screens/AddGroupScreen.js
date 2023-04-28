@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
+import GroupContainer from '../compenents/ComponentMain/GroupContainer';
+import { addGroupsMainAC } from '../redux/actions';
 import {
   StyleSheet,
   Text,
   View,
-  Button,
   ScrollView,
   ActivityIndicator,
   SafeAreaView,
@@ -13,23 +13,17 @@ import {
   TouchableOpacity,
   TextInput
 } from 'react-native';
-import { AccountName } from '../compenents/ComponentMain/AccountName';
-import { Groups } from '../compenents/ComponentMain/Groups';
-import GroupPicture from '../compenents/ComponentMain/GroupPicture';
-import GroupContainer from '../compenents/ComponentMain/GroupContainer';
-import { addGroupsMainAC } from '../redux/actions';
 
 export default function AddGroupScreen({ navigation }) {
   const dispatch = useDispatch();
   const [newGroupName, onChangeText] = React.useState('');
   const login = useSelector((store) => store.isAuth);
-  const redux = useSelector((store) => store);
-  console.log('redux AddGroupScreen before>>>>', redux);
+  useSelector((store) => store);
 
   async function saveNewGroup() {
     navigation.navigate('Main')
     
-    const response = await fetch('http://192.168.43.13:3100/newGroup', {
+    const response = await fetch('/newGroup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -38,7 +32,6 @@ export default function AddGroupScreen({ navigation }) {
     });
 
     const groups = await response.json();
-    console.log('groups front>>>', groups);
     dispatch(addGroupsMainAC(groups));
     onChangeText('');
   }
@@ -60,7 +53,7 @@ export default function AddGroupScreen({ navigation }) {
         {<ActivityIndicator />}
         { (
           <ScrollView
-      contentContainerStyle={{
+        contentContainerStyle={{
         flexGrow: 1,
         justifyContent: 'center',
         alignContent: 'center',
@@ -69,17 +62,11 @@ export default function AddGroupScreen({ navigation }) {
       }}
       >
             <SafeAreaView>
-              {/* <View style={styles.account}>
-                <AccountName navigation={navigation} />
-              </View> */}
-
               <View style={styles.groups}>
               <GroupContainer>
               <View style={styles.items}>
               <Text style={styles.accountName}>Groups</Text>
-             
               <View>
-             
               </View>
               </View>
               </GroupContainer>
@@ -145,10 +132,7 @@ const styles = StyleSheet.create({
     color: '#fb5b5a',
     fontSize: 25,
     marginTop: 30,
-    // marginRight: 20,
     marginLeft: 110,
-    // alignItems: 'center',
-    // justifyContent: 'center',
     margin: 55,
   },
   account: {

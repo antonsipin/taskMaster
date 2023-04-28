@@ -6,9 +6,8 @@ import { addAllTasks } from '../redux/actions';
 import { useIsFocused } from '@react-navigation/native';
 
 export default function AllTasksScreen({ navigation }) {
-  let user = useSelector((store) => store.isAuth);
+  useSelector((store) => store.isAuth);
   const dispatch = useDispatch();
-
   const isFocused = useIsFocused();
 
   useEffect(() => {
@@ -19,15 +18,15 @@ export default function AllTasksScreen({ navigation }) {
   let allTasksStore = useSelector((store) => store.allTasks);
 
   async function getAllTasks() {
-    const response = await fetch('http://192.168.43.13:3100/allTasks', {
+    const response = await fetch('/allTasks', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ groupsStore }),
     });
-    const allTasks = await response.json();
 
+    const allTasks = await response.json();
     dispatch(addAllTasks(allTasks));
   }
 

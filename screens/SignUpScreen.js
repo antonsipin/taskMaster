@@ -3,7 +3,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   TextInput,
   Keyboard,
   TouchableWithoutFeedback,
@@ -12,10 +11,6 @@ import {
 } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { signUp } from '../redux/actions';
-
-const image = {
-  uri: '',
-};
 
 export default function SignUpScreen({ navigation: { goBack } }) {
   const dispatch = useDispatch();

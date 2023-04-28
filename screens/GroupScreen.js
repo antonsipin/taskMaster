@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import GroupTasks from '../compenents/ComponentsGroupScreen/GroupTasks';
+import { useSelector, useDispatch } from 'react-redux';
+import { useIsFocused } from '@react-navigation/native';
+import { addTasks } from '../redux/actions';
+import { TextInput } from 'react-native';
 import {
   StyleSheet,
   Text,
   View,
-  Button,
   ScrollView,
   TouchableOpacity,
   ActivityIndicator,
@@ -11,45 +15,33 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
-import GroupTasks from '../compenents/ComponentsGroupScreen/GroupTasks';
-import { useSelector, useDispatch } from 'react-redux';
-import { useIsFocused } from '@react-navigation/native';
-import { addTasks } from '../redux/actions';
-import BottomTabs from '../navigation/BottomTab';
-import { Input } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { TextInput } from 'react-native';
-
 export default function GroupScreen({ navigation }) {
+  const dispatch = useDispatch();
+  const isFocused = useIsFocused();
   const [value, onChangeText] = React.useState('');
   const [tougle, SetTougle] = React.useState(false);
-
   let group = useSelector((store) => store.groupName);
-  const dispatch = useDispatch();
-
   let tasksStore = useSelector((store) => store.tasks);
-
-  const isFocused = useIsFocused();
 
   useEffect(() => {
     getTasks();
   }, [isFocused]);
 
   async function getTasks() {
-    const response = await fetch(`http://192.168.43.13:3100/groupTasks`, {
+    const response = await fetch(`/groupTasks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ group }),
     });
-    const tasks = await response.json();
 
+    const tasks = await response.json();
     dispatch(addTasks(tasks));
   }
 
   async function saveNewTask() {
-    const response = await fetch('http://192.168.43.13:3100/newTask', {
+    const response = await fetch('/newTask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

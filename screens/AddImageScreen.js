@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import * as ImagePicker from 'expo-image-picker';
+import * as Permissions from 'expo-permissions';
 import {
   StyleSheet,
   Text,
   View,
-  Button,
   Image,
   Alert,
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-import { useSelector } from 'react-redux';
-import * as ImagePicker from 'expo-image-picker';
-import * as Permissions from 'expo-permissions';
 
 async function askForPermissions() {
   const { status } = await Permissions.askAsync(
@@ -48,7 +47,7 @@ export default function AddImageScreen({ route, navigation: { goBack } }) {
   };
 
   const addPicture = async () => {
-    const response = await fetch('http://192.168.43.13:3100/addImg', {
+    await fetch('/addImg', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -65,7 +64,6 @@ export default function AddImageScreen({ route, navigation: { goBack } }) {
       source={require('../assets/TaskMaster.jpg')}
     >
       <View style={styles.wrapper}>
-        {/* {!image && <Button title='Take a Picture' onPress={takePhoto} />} */}
         {!image && (
           <TouchableOpacity style={styles.buttonAdd}>
             <Text style={styles.button} onPress={takePhoto}>
@@ -75,7 +73,6 @@ export default function AddImageScreen({ route, navigation: { goBack } }) {
         )}
 
         {image && <Image style={styles.image} source={{ uri: image }} />}
-        {/* {image && <Button title='Add' onPress={addPicture} />} */}
 
         {image && (
           <TouchableOpacity style={styles.buttonAdd}>
@@ -104,18 +101,15 @@ const styles = StyleSheet.create({
   },
   background: {
     paddingTop: 100,
-    // alignItems: 'center',
     height: 1000,
     width: '100%',
     alignSelf: 'stretch',
   },
   buttonAdd: {
-    // marginLeft: 155,
     width: '28%',
     backgroundColor: '#fb5b5a',
     borderRadius: 25,
     height: 50,
-    // width: 50,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 15,

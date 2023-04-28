@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckBox, Avatar } from 'react-native-elements';
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 export default function AllTasks({ name, image, completed, navigation }) {
   const user = useSelector((store) => store.isAuth);

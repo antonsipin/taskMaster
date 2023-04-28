@@ -1,24 +1,21 @@
 import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addBoard } from '../redux/actions';
+import Leaderboard from '../compenents/ComponentLeaderboard/Leaderboard';
 import {
   StyleSheet,
-  Text,
   View,
   ScrollView,
   ImageBackground,
 } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
-import { addBoard } from '../redux/actions';
-import Leaderboard from '../compenents/ComponentLeaderboard/Leaderboard';
 
 export default function LeaderboardScreen({ navigation }) {
   const dispatch = useDispatch();
-
   let group = useSelector((store) => store.groupName);
-
   let chartStore = useSelector((store) => store.chart);
 
   async function getBoard() {
-    const response = await fetch('http://192.168.43.13:3100/leaderboard', {
+    const response = await fetch('/leaderboard', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

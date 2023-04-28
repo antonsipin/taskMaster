@@ -1,28 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { Avatar } from 'react-native-elements';
 import { useSelector } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export const AccountName = ({ navigation }) => {
   const user = useSelector((store) => store.isAuth);
-
   let avatar = require(`../../assets/def_ava.jpg`);
+
+  // ToDO: avatar
 
   if (user == 'Anton') {
     avatar = require(`../../assets/Anton.jpg`);
   } else if (user == 'Aleksei') {
     avatar = require(`../../assets/Aleksei.jpg`);
   }
-  // user === 'Aleksei' ? `../../assets/Aleksei.jpg` : `../../assets/Anton.jpg`;
 
   let str = user;
-
   let matches = str.match(/\b(\w)/g);
+  
   return (
     <View style={styles.text}>
       <Image style={styles.avatar} source={avatar} />
-
       <Text style={styles.accountName}>{user}</Text>
       <MaterialCommunityIcons
         name='logout'

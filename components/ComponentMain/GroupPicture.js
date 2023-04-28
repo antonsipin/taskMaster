@@ -1,19 +1,18 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { StyleSheet, ScrollView, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Image, Text } from 'react-native-elements';
 import { useDispatch } from 'react-redux';
 import { getGroupNameAC } from '../../redux/actions';
 
 export default function GroupPicture({ name, image, navigation }) {
-  const dataFromRedux = useSelector((store) => store);
+  useSelector((store) => store);
   const dispatch = useDispatch();
 
   function getGroupName() {
     dispatch(getGroupNameAC(name));
     navigation.navigate('Group', { name });
   }
-  console.log('image', image);
   return (
     <View style={styles.item}>
       <Image

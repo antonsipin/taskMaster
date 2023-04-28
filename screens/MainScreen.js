@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  ScrollView,
-  ActivityIndicator,
-  SafeAreaView,
-  ImageBackground,
-} from 'react-native';
 import { AccountName } from '../compenents/ComponentMain/AccountName';
 import { Groups } from '../compenents/ComponentMain/Groups';
 import GroupPicture from '../compenents/ComponentMain/GroupPicture';
 import GroupContainer from '../compenents/ComponentMain/GroupContainer';
 import { addGroupsMainAC } from '../redux/actions';
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  ActivityIndicator,
+  SafeAreaView,
+  ImageBackground,
+} from 'react-native';
 
 export default function MainScreen({ navigation }) {
   const user = useSelector((store) => store.isAuth);
@@ -93,7 +90,6 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 30,
     margin: 5,
-    // height: 450,
     borderWidth: 0,
     backgroundColor: '#fff',
   },
