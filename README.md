@@ -7,16 +7,6 @@
 Techs: HTML, CSS, JavaScript, Express.js, Node.js, MongoDB, React Native, Redux.
 </h3>
  
- <h3>
-Команда:
-</h3>
-
-https://github.com/MuckHub
-
-https://github.com/KetiRudneva
-
-https://github.com/antonsipin
-
 <h3 align="center">
 Android screens:
 </h3>
