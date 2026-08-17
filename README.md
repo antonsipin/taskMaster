@@ -2,7 +2,6 @@
 
 <p> This is an entertainment application for iOS and Android for communicating with friends and colleagues, sharing photos of completed tasks, viewing completed tasks of friends, calculating ratings, exchanging likes.
 </p>
-  
 <h3>
 Techs: HTML, CSS, JavaScript, Express.js, Node.js, MongoDB, React Native, Redux.
 </h3>
